@@ -27,6 +27,12 @@
   display: none;
   padding: 20px;
 }
+#bar_search {
+  margin-top: 70px;
+  margin-left: 20px;
+  padding: 20px;
+  width: 30px;
+}
 
 @media screen and (max-width: 600px) {
   #bar {
