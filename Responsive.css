@@ -1,0 +1,117 @@
+@media screen and (max-width: 800px) {
+
+    .navigation {
+        display: none;
+    }
+    
+    #bar {
+        display: flex;
+    }
+
+
+    #download {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+
+    #footer-link1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 50px 00px 0px 20px;
+        margin: 0px;
+    }
+
+    #social {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid white;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    #bttn {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #f06d82;
+    padding: 10px 20px;
+    font-size: 16px;
+
+        a{
+            color: black;
+            
+        }
+    }
+
+    #btn {
+    background-color: #f06d82;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    }
+
+    #text-response {
+        font-size: 24px;
+
+        line-break: normal;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #description {
+        max-width: 100%;
+    }
+
+    #description_list img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #cost {
+        margin-left: 3rem;
+    }
+
+    #order_update {
+        width: 250px;
+    }
+
+    #order_add {
+        width: 250px;
+    }
+
+    #ada {
+        padding: 0px 0px 0px 0px;
+    }
+    #ada1 {
+        padding: 0;
+    }
+
+    /* ----ABOUT---- */
+    #about {
+        padding: 0px;
+    }
+    #about img {
+        width: 150px;
+    }
+    #about1 {
+        padding: 0;
+    }
+    #contact {
+        padding: 0;
+
+    }
+    #contact1 {
+        padding: 0;
+    }
+    #contact2 {
+        padding: 0;
+    }
+}

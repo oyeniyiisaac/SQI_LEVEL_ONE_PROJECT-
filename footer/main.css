@@ -1,0 +1,120 @@
+/* Basic Reset and Variables */
+:root {
+    --pink-color: #ff69b4; /* A vibrant pink, adjust this to match the image precisely */
+    --text-color: #333;
+    --logo-color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* 1. Header with Curved Background */
+.bookdiverse-header {
+    /* Sets up a large pink area */
+    background-color: var(--pink-color);
+    position: relative;
+    /* Make it tall enough to contain the curve and logo */
+    height: 300px;
+    width: 100%;
+    overflow: hidden; /* Important for containing the curve without scrollbars */
+}
+
+/* The Magic: Creating the Inverted Curve */
+/* We'll use a pseudo-element with a large border-radius */
+.bookdiverse-header::after {
+    content: "";
+    position: absolute;
+    /* Position the pseudo-element at the bottom of the pink container */
+    bottom: 0;
+    left: -5%; /* Extend past the edges to ensure full width coverage for the curve */
+    right: -5%;
+    /* Set a solid background color (white) for the shape that will create the 'cutout' */
+    background: black; 
+    /* A large height and a massive border-radius to form the smooth curve */
+    height: 100px; /* Adjust this to control the depth of the curve */
+    border-top-left-radius: 50% 100px; /* Horizontal radius % / Vertical radius px */
+    border-top-right-radius: 50% 100px; /* Adjust radii until the curve matches */
+    z-index: 1; /* Keep it below the header content */
+}
+
+/* 2. Logo and Text Styling */
+.header-content {
+    /* Center the logo container */
+    width: 100%;
+    max-width: 1200px; /* Optional: limit width */
+    margin: 0 auto;
+    text-align: center;
+    position: relative; /* Bring content above the curve pseudo-element */
+    z-index: 2;
+    padding-top: 50px; /* Adjust positioning */
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align the text/bookmark at the bottom */
+    color: var(--logo-color);
+}
+
+.logo-bookmark {
+    /* Styling for the bookmark icon */
+    font-size: 3em; 
+    line-height: 1;
+    margin-right: 5px;
+    /* The image shows the bookmark rising above the pink area, 
+       this is achieved by the logo being a child of the .header-content 
+       and positioning it so it overlaps the pink border. */
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* 3. App Store Badges and Social Icons */
+.app-and-social {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0; /* Space below the header */
+}
+
+.app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between badges */
+    margin-bottom: 50px;
+}
+
+.app-badge img {
+    /* Assuming you use images for the badges */
+    width: 150px; /* Adjust size */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* 4. Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    /* Basic styling for social icons */
+    color: var(--pink-color); /* Or the color they are in the image (black/grey) */
+    font-size: 2em;
+    text-decoration: none;
+    /* The image has the icons relatively small and clustered close to each other 
+       with a specific font/style */
+}
+
+/* You'll need to link a font icon library (like Font Awesome) in your HTML 
+   to display the actual social icons */
+/* e.g., <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> */
