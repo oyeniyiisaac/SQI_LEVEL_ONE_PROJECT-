@@ -27,12 +27,13 @@
   display: none;
   padding: 20px;
 }
-#bar_search {
+
+/* #bar_search {
   margin-top: 70px;
   margin-left: 20px;
   padding: 20px;
   width: 30px;
-}
+} */
 
 @media screen and (max-width: 600px) {
   #bar {
@@ -310,4 +311,12 @@ nav {
 
 #contact2 {
   padding: 10px 120px;
+}
+
+#dashboard {
+  display: flex;
+}
+
+#dashboard1 {
+  display: none;
 }
